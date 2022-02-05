@@ -9,11 +9,14 @@
             turbo_method: :delete,
             turbo_confirm: "Are you sure?"
         } %>
-  </ul>
-  <h2>Comments</h2>
-  <% render @article.comments %>
-  <h2>Add a comment:</h2>
-  <% render 'comments/form' %>
-  <div>
-    <%= link_to "Articles", articles_path %>
-  </div>
+  </li>
+</ul>
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<div>
+  <%= link_to "Articles", articles_path %>
+</div>
