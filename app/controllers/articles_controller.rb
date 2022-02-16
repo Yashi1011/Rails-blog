@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
+    @articles_public_count = Article.public_count
   end
 
   def show
