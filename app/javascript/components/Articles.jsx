@@ -1,15 +1,15 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 
-function Article(props){
+function Articles(props){
   const {articles, articles_public_count} = window;
   console.log("Articles are: ",articles);
 
   const article_list_items = articles.map((article) =>
     <li key={article.id}>
-      <Link to={`/articles/${article.id}`}>
+      <a href={`/articles/${article.id}`}>
         {article.title}
-      </Link>
+      </a>
     </li>
   );
 
@@ -24,8 +24,12 @@ function Article(props){
           {article_list_items}
         </ul>
       </div>
+
+      <div>
+        <a href={`/articles/new`}>Create New Article</a>
+      </div>
     </div>
   );
 }
 
-export default Article
+export default Articles

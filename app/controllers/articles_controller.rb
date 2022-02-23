@@ -15,6 +15,13 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    # @article = Article.create!(article_params)
+    # if @article
+    #   # render json: @article
+    #   redirect_to @article
+    # else
+    #   render json: @article.errors
+    # end
     @article = Article.new(article_params)
 
     if @article.save

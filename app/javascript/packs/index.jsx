@@ -5,16 +5,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from '../components/App'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Router>
-      <Routes>
-        <Route path="*" element={<App />} />
-      </Routes>
-    </Router>,
-    // <App />,
+    <App />,
     document.body.appendChild(document.createElement('div')),
   )
 })

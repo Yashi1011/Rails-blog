@@ -1,18 +1,22 @@
 import React, {Component} from 'react'
-import { Route, Routes, Switch } from 'react-router-dom'
-import Article from './Article'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Articles from './Articles'
 import Show from './Show'
+import NewArticle from './NewArticle'
+import EditArticle from './EditArticle'
 
 class App extends Component{
   render() {
     return(
-      // <Switch>
-      <Routes>
-        <Route exact path="/" element={<Article />} />
-        <Route path="/articles/:id" element={<Show />} />
-      </Routes>
-      // </Switch>
-      // <div>Hello react</div>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Articles />} />
+          <Route exact path="/articles" element={<Articles />} />
+          <Route exact path="/articles/:id" element={<Show />} />
+          <Route exact path="/articles/new" element={<NewArticle />} />
+          <Route exact path="/articles/:id/edit" element={<EditArticle />} />
+        </Routes>
+      </Router>
     );
   }
 }
